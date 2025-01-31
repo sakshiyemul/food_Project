@@ -1,0 +1,132 @@
+/* General Navbar Styling */
+.navbar {
+    background-color: #000000; /* Black background */
+    padding: 8px 16px; /* Reduced padding for a more compact navbar */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Logo Styling */
+.navbar-brand {
+    font-size: 2rem; /* Smaller font size for the logo */
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for zoom and color */
+}
+
+/* Logo Icon */
+.navbar-brand .logo-icon {
+    font-size: 2.5rem; /* Smaller size for the icon */
+    margin-right: 8px; /* Reduced space between logo icon and text */
+}
+
+/* Hover Effect for Logo */
+.navbar-brand:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    color: #f0f0f0; /* Change color on hover */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    font-size: 1rem; /* Smaller font size */
+    color: #ffffff; /* White text */
+    font-weight: 500;
+    margin-left: 15px; /* Reduced spacing between links */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Underline effect on hover */
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%; /* Underline expands to full width on hover */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #f0f0f0; /* Slight gray hover effect */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.navbar-nav .nav-item .nav-link:focus {
+    color: #f0f0f0;
+    outline: none;
+}
+
+/* Cart Icon Styling */
+.navbar-search-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 25px; /* Reduced margin for cart icon */
+}
+
+.navbar-search-icon img {
+    width: 24px; /* Reduced size of the cart icon */
+    height: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-search-icon img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Cart Count Styling */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px; /* Adjust size */
+    height: 18px; /* Adjust size */
+    border-radius: 50%;
+    background-color: #ff0000; /* Red background */
+    color: #ffffff;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Cart Count Hover Effect */
+.cart-count:hover {
+    background-color: #d50000; /* Darker red when hovered */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .navbar-nav {
+        background-color: #000000;
+        border-radius: 5px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.1rem; /* Increase font size on mobile */
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+}

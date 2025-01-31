@@ -1,0 +1,139 @@
+/* Image Container Section */
+.image-container {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+#h1-s{
+  color: #fff;
+}
+.parallax img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.text-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.text-overlay p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.sub-heading {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-top: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Restaurant description */
+.restaurant-about {
+  font-size: 1.15rem;
+  font-weight: 300;
+  margin-top: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  padding: 0 30px;
+  line-height: 1.8;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Team Section */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Location Section */
+iframe {
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.text-center p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .image-container {
+    height: 50vh;
+  }
+
+  .text-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-overlay p {
+    font-size: 1.1rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .card-img-top {
+    width: 150px;
+    height: 150px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+
+  /* Adjustments for mobile for restaurant-about */
+  .restaurant-about {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
